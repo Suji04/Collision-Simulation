@@ -1,0 +1,62 @@
+div{
+	background-color: grey;
+	padding: 0;
+	height: 50px;
+	text-align: center;
+}
+
+h1{
+	margin: 0;
+	padding: 5px;
+	color: white;
+}
+.slide{
+	-webkit-appearance: none;  /* Override default CSS styles */
+  	appearance: none;
+	width: 250px;
+	text-align: center;
+	color: red;
+	background: #888888;
+	outline: none;
+	opacity: .8;
+}
+
+.slide:hover {
+  opacity: 1; 
+}
+
+.slide::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 15px; 
+  height: 15px; 
+  background: #ffcc55; 
+  cursor: pointer; 
+}
+
+
+.c{
+	width: 640px;
+	align-content: center;
+	text-align: center;
+	padding: 10px;
+}
+
+canvas{
+	width: 640px;
+	padding: 20px auto;
+}
+
+button{
+	outline: none;
+	width: 150px;
+	background-color: #ff6055;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	text-decoration:none;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 15px;
+	color: #333333;
+}
