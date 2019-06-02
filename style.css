@@ -1,16 +1,20 @@
 div{
-	background-color: grey;
+	background-color: #181530;
+	width: 100%;
 	padding: 0;
-	height: 50px;
+	height: 150px;
 	text-align: center;
 }
 
 h1{
 	margin: 0;
-	padding: 5px;
+	padding: 40px 0 0 0;
 	color: white;
+	font-size: 50px;
+	font-family: 'Righteous', cursive;
 }
 .slide{
+	/*position: */
 	-webkit-appearance: none;  /* Override default CSS styles */
   	appearance: none;
 	width: 250px;
@@ -18,7 +22,7 @@ h1{
 	color: red;
 	background: #888888;
 	outline: none;
-	opacity: .8;
+	opacity: .7;
 }
 
 .slide:hover {
@@ -30,7 +34,7 @@ h1{
   appearance: none;
   width: 15px; 
   height: 15px; 
-  background: #ffcc55; 
+  background: #e80c22; 
   cursor: pointer; 
 }
 
@@ -52,11 +56,37 @@ button{
 	width: 150px;
 	background-color: #ff6055;
 	padding: 10px;
-	border-radius: 2px;
+	border-radius: 5px;
 	border: none;
 	text-decoration:none;
 	cursor: pointer;
 	font-weight: 600;
 	font-size: 15px;
 	color: #333333;
+}
+
+p{
+	font-size: 40px;
+	letter-spacing: 3px;
+	word-spacing: 7px;
+	font-family: 'East Sea Dokdo', cursive;
+	color: #181530;
+}
+
+#sp{
+	position: absolute;
+	left: 700px;
+	top: 210px;
+}
+
+#an{
+	position: absolute;
+	left: 700px;
+	top: 310px;
+}
+
+#po{
+	position: absolute;
+	left: 700px;
+	top: 410px;
 }

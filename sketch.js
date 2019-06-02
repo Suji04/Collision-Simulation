@@ -20,30 +20,30 @@ function setup(){
 
 	simulate = createButton(" RUN / STOP ");
 	simulate.mousePressed(run);
-	simulate.position(800,400);
+	simulate.position(800,600);
 
 	reset= createButton(" RESET ");
 	reset.mousePressed(initial);
-	reset.position(1000,400);
+	reset.position(1000,600);
 
 	a_speed = createSlider(0,10,5,0);
 	b_speed = createSlider(0,10,5,0);
-	a_speed.position(700,100);
-	b_speed.position(1000,100);
+	a_speed.position(700,300);
+	b_speed.position(1000,300);
 	a_speed.addClass("slide");
 	b_speed.addClass("slide");
 
 	a_angle = createSlider(0,PI,PI/2,0);
 	b_angle = createSlider(0,PI,PI/2,0);
-	a_angle.position(700,200);
-	b_angle.position(1000,200);
+	a_angle.position(700,400);
+	b_angle.position(1000,400);
 	a_angle.addClass("slide");
 	b_angle.addClass("slide");
 
 	a_pos = createSlider(30, 570, 300, 0);
 	b_pos = createSlider(30, 570, 300, 0);
-	a_pos.position(700,300);
-	b_pos.position(1000,300);
+	a_pos.position(700,500);
+	b_pos.position(1000,500);
 	a_pos.addClass("slide");
 	b_pos.addClass("slide");
 }
