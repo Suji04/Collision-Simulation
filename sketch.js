@@ -18,12 +18,12 @@ function setup(){
 	b.v.y=5;
 	b.v.x=-4;
 
-	simulate = createButton(" RUN / STOP ");
-	simulate.mousePressed(run);
+	simulate = createButton(" RUN ");
+	simulate.mouseClicked(run);
 	simulate.position(800,600);
 
 	reset= createButton(" RESET ");
-	reset.mousePressed(initial);
+	reset.mouseClicked(initial);
 	reset.position(1000,600);
 
 	a_speed = createSlider(0,10,5,0);
@@ -54,21 +54,31 @@ function run(){
 
 function initial(){
 	sim=false;
+
 	a.p.x=30;
-	a.p.y=300;
-	b.p.x=300;
 	b.p.y=30;
-	a.v.x=-1;
-	a.v.y=-5;
-	b.v.y=5;
-	b.v.x=-4;
-	
+
+	a.p.y=a_pos.value();
+	b.p.x=b_pos.value();
+
+	a.v.x=a_speed.value()*sin(a_angle.value());
+	b.v.y=b_speed.value()*sin(b_angle.value());
+
+	a.v.y=a_speed.value()*cos(a_angle.value());
+	b.v.x=b_speed.value()*cos(b_angle.value());
 }
 
 
 function draw() {
 	background(0);
+
+	if(sim==true){
+		a.update();
+		b.update();
+	}
+
 	if(sim==false){
+		initial();
 		a.p.y=a_pos.value();
 		b.p.x=b_pos.value();
 
@@ -79,15 +89,13 @@ function draw() {
 		b.v.x=b_speed.value()*cos(b_angle.value());
 
 	}
+
 	a.display();
 	b.display();
 	a.arrow();
 	b.arrow();
+
 	if(a.iscollision(b)){
 		a.aftercollision(b);
-	}
-	if(sim==true){
-		a.update();
-		b.update();
 	}
 }
